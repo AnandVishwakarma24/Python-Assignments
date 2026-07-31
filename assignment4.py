@@ -4,14 +4,16 @@
 
 # Assignment Problems
 
+
+
 # Concept: Classes & Objects
+
 
 # Q1 Create BankAccount attributes account_number owner_name, balance.
 # Add methods to deposit, withdraw, and check balance.
 
 
 # class Bank_Account:
-
 #     def __init__(self,account_number, owner_name):
 #         self.account_number=account_number
 #         self.owner_name=owner_name
@@ -29,8 +31,6 @@
 #             print("Insufficient Balance !")
 #     def info(self):
 #         print(f"Account Number : {self.account_number} \n Owner Name : {self.owner_name} \n Balance : {self.balance}")
-
-
 
 # owner_name=input("Enter Account Holder's Name : ")
 # account_number=int(input("Enter Account Number : "))
@@ -55,7 +55,9 @@
 #         print("Invalid Choice !")
 
 
+
 # Concept: Classes & Objects
+
 
 # Q2. Create a class Book with the following attributes:
 # • title
@@ -114,6 +116,8 @@
 #     else:
 #         print("Invalid Choice!")
 
+
+
 # Concept: Encapsulation
 
   
@@ -170,8 +174,6 @@
 #         choice = int(input("Enter Your Choice: "))
 #         print("-------------------------------")
 
-        
-
 #         if choice == 1:
 #             while (True):
 #                 print("Edit options ")
@@ -206,11 +208,12 @@
 #             print("Invalid Choice!")
 
 
+
 # Concept: Function Overriding
+
 
 # Q4. Create a class Shape with a method area().
 # Create subclasses Circle, Rectangle, and Triangle that override the area() method.
-
 
 # class shape: 
 #     def area(self):
@@ -234,8 +237,6 @@
 #     def area(self):
 #         return print("Area of the Triangle : ",self.height*self.base*0.5)
 
-
-
 # shap1=Rectangle(23,22)
 # shap2=Circle(44)
 # shap3=triangle(32,22)
@@ -244,7 +245,9 @@
 # shap3.area()
 
 
+
 # Concept: Inheritance
+
 
 # Q5. Create a  base class Vehicle with attributes like brand and model.
 # Create two subclasses Car and Bike that add extra attributes - seats (in Car) & engine_cc (in Bike).
@@ -272,7 +275,9 @@
 # bike1.display()
 
 
+
 # Concept: Abstraction
+
 
 # Q6. Create an abstract class  Employee with an abstract method
 # calculate_salary().
@@ -305,14 +310,17 @@
 # full_Time_Employee1=full_Time_Employee()
 # full_Time_Employee1.calculate_salary()
 
+
+
 # Concept: Constructor Overloading (with Default Parameters)
+
+
 # Q7. Create a class Person that allows the constructor to work with:
 # • name only
 # • name + age
 # • name + age + address
 # As direct constructor overloading (multiple constructors) are not allowed but
 # we have to use default parameters to simulate constructor overloading.
-
 
 # class person:
 #     def __init__(self,name):
@@ -344,12 +352,34 @@
 # p3.get_info()
 
 
+
 # Concept: Instance & Class Attributes
+
 
 # Q8. Create a class Player with:
 # • a class variable player_count
 # • instance variables name and level
 # Track how many players were created.
+
+# class player:
+#     count=0
+#     def __init__(self,name,level):
+#         self.name=name
+#         self.level=level
+#         player.count+=1
+#     def display(self):
+#         print("Name : ",self.name)
+#         print("Level : ",self.level)
+
+# p1=player("Anand",100)
+# p1.display()
+
+# p2=player("Vishal",99)
+# p2.display()
+# print("Total Players Created:", player.count)
+
+
+
 # Concept: Multiple Inheritance
 
 
@@ -357,23 +387,43 @@
 # attributes & methods. Then create a class Bear that inherits from all the above
 # classes to showcase how multiple inheritance works.
 
+# class Herbivore:
+#     def __init__(self):
+#         self.herb_food="Plants"
+#     def eat_plants(self):
+#         print(f"Herbivore eats : {self.herb_food}")
+# class Carnivor:
+#     def __init__(self):
+#         self.carn_food="Meat"
+#     def eat_meat(self):
+#         print(f"Carnivor eats : {self.carn_food}")
+# class Omnivore:
+#     def __init__(self):
+#         self.type="Omnivore"
+#     def eat_type(self):
+#         print("Omnivore eats both plant and meat.")
+# class bear(Herbivore,Carnivor,Omnivore):
+#     def __init__(self):
+#         Herbivore.__init__(self)
+#         Carnivor.__init__(self)
+#         Omnivore.__init__(self)
+#         self.name = "Bear"
 
-class Herbivore:
-    def __init__(self):
-        print("Eat plants")
-    def grass(self):
-        print("Likes grass ,fruits, and berries")
-class Carnivor:
-    def __init__(self):
-        print("Eat meat")
-    def grass(self):
-        print("Like deer meat,hipo meat ")
+#     def display(self):
+#         print("Animal Name:", self.name)
 
+# b = bear()
 
+# b.display()
+# b.eat_plants()
+# b.eat_meat()
+# b.eat_type()
 
 
 
 # Concept: OOP
+
+
 # Q10. Mini Project – OOP Chat System
 # Let’s create a Chat System using OOPs concepts. We have to create classes:
 # • User
@@ -383,3 +433,75 @@ class Carnivor:
 # • sending messages
 # • viewing chat history
 # • user joining and leaving the chatroom
+
+# class User:
+#     def __init__(self,name):
+#         self.name=name
+#     def send_message(self, chatroom, text):
+#         chatroom.add_message(self,text)
+#     def join_chat(self, chatroom):
+#         chatroom.join_user(self)
+#     def leave_chat(self,chatroom):
+#         chatroom.leave_user(self)
+
+# class Message:
+#     def __init__(self,sender,text):
+#         self.sender=sender
+#         self.text=text
+#     def display(self):
+#         print(f"{self.sender} : {self.text}")
+
+# class ChatRoom:
+#     def __init__(self,room_name):
+#         self.room_name=room_name
+#         self.users=[]
+#         self.messages=[]
+#     def join_user(self,user):
+#         if user not in self.users:
+#             self.users.append(user)
+#             print(f"{user.name} joined '{self.room_name}'.")
+#     def leave_user(self, user):
+#         if user in self.users:
+#             self.users.remove(user)
+#             print(f"{user.name} left '{self.room_name}.'")
+#     def add_message(self, user, text):
+#         if user in self.users:
+#             message=Message(user.name,text)
+#             self.messages.append(message)
+#             print(f"Message sent by {user.name}")
+#         else:
+#             print(f"{user.name} is not in the chat room!")
+#     def show_chat_history(self):
+#         print(f"\n---Chat History of {self.room_name}")
+#         if not self.messages:
+#             print("No message yet.")
+#         else:
+#             for message in self.messages:
+#                 message.display()
+
+# room=ChatRoom("Python Leaners")
+
+# user1=User("Anand")
+# user2=User("Vishal")
+# user3=User("Rahul")
+
+
+# user1.join_chat(room)
+# user2.join_chat(room)
+
+
+# user1.send_message(room ,"Hi Vishal!")
+# user2.send_message(room, "Hi Anand!")
+
+# user2.leave_chat(room)
+
+# user2.send_message(room, "Can anyone hear me!")
+
+# user3.join_chat(room)
+# user3.send_message(room, "Hello friends!")
+
+# room.show_chat_history()
+
+git remote add origin https://github.com/AnandVishwakarma24/Python-Assignments
+git branch -M main
+git push -u origin main
