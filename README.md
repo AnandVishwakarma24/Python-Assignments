@@ -13,6 +13,7 @@ These programs were written to strengthen problem-solving skills and build a sol
 ├── assignment2.py
 ├── assignment3.py
 ├── assignment4.py
+├── assignment5.py
 └── README.md
 ```
 
@@ -76,6 +77,15 @@ These programs were written to strengthen problem-solving skills and build a sol
 
 ---
 
+### Assignment 5 – File Handling, JSON & Exception Handling
+* Writing to a file and reading it back (`names.txt`)
+* Appending log entries to a file (`log.txt`)
+* List comprehension to filter numbers
+* Saving/loading a dictionary as JSON, then updating it (`cities.json`)
+* Exception handling with `try`/`except` for `FileNotFoundError`
+
+---
+
 ## 🛠 Technologies Used
 * Python 3.x
 * Visual Studio Code
@@ -107,6 +117,10 @@ or
 ```bash
 python assignment4.py
 ```
+or
+```bash
+python assignment5.py
+```
 
 ---
 
@@ -119,6 +133,9 @@ Through these assignments, I practiced:
 * String manipulation
 * List, Tuple, Dictionary and Set operations
 * Object-Oriented Programming (classes, inheritance, encapsulation, abstraction, polymorphism)
+* File handling (read/write/append modes)
+* Working with JSON data
+* Exception handling
 * Problem-solving techniques
 * Basic algorithm implementation
 
