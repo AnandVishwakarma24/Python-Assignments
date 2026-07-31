@@ -502,6 +502,3 @@
 
 # room.show_chat_history()
 
-git remote add origin https://github.com/AnandVishwakarma24/Python-Assignments
-git branch -M main
-git push -u origin main
